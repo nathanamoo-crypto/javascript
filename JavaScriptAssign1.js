@@ -9,6 +9,7 @@ function capitalizeWords(str) {
 }
 console.log(capitalizeWords("hello world from javascript")); // Output: "Hello World From Javascript"
 
+
 //2.Array methods: Given an array of numbers use map, filter, and reduce to double each number, keep only even numbers ,and find the sum of the remaining numbers
 function processNumbers(arr) {
     return arr
@@ -17,6 +18,7 @@ function processNumbers(arr) {
     .reduce((sum, num) => sum + num, 0); // Find the sum of the remaining numbers
 }
 console.log(processNumbers([1, 2, 3, 4, 5])); // Output: 12
+
 
 //3.Object destructuring: Extract username,email and theme and prints them
 const user = {
@@ -28,6 +30,7 @@ const user = {
     notifications: true,},};
 const { profile: { username, email }, settings: { theme } } = user;
 console.log(username, email, theme);// Output: mandem mandem@example.com dark
+
 
 //4.Array of Objects: Function that returns all products with a price less than or equal to budget
 const products=[
@@ -42,11 +45,13 @@ function getAffordableProducts(products, budget) {
 }   
 console.log(getAffordableProducts(products, 800)); // Output: [{name: "Phone", price: 800}, {name: "Tablet", price: 600}]
 
+
 //5.Spread and Rest Operators: Functions that accepts multiple arrays and merges them into a single array without duplicates
 function mergeArrays(...arrays) {
     return [...new Set(arrays.flat())];
 }
 console.log(mergeArrays([1, 2, 3], [3, 4, 5], [5, 6, 7])); // Output: [1, 2, 3, 4, 5, 6, 7]
+
 
 //6. Sorting and Finding: Function that finds the second largest number in an array without using sort()
 function secondLargest(arr) {
@@ -63,6 +68,7 @@ function secondLargest(arr) {
 }
 console.log(secondLargest([3, 1, 4, 4, 5, 5, 2])); // Output: 4
 
+
 //7.Higher Order Functions: Function where on operation such as square, double or negate is applied to every element of an array
 function applyOperation(arr, operation) {
     const operations = {
@@ -73,6 +79,7 @@ function applyOperation(arr, operation) {
     return arr.map(operations[operation]);
 }  
 console.log(applyOperation([1, 2, 3, 4], "square")); // Output: [1, 4, 9, 16]
+
 
 //8.Advanced Object Manipulation: Function that groups an array of objects by a  category property
 function groupByCategory(items) {
@@ -97,6 +104,7 @@ function getUserCity(user) {
 }
 console.log(getUserCity({ name: "Palmer", address: { city: "London" } })); // Output: "London"
 console.log(getUserCity({ name: "Mary" })); // Output: "Unknown"
+
 
 //1o.Bous: Async/Await + Fetch: Asnc function that fetches posts from https://jsonplaceholder.typicode.com/posts and logs the titles of the first 5 posts
 async function fetchPostTitles() {
